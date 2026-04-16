@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cursos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Cadastro de Cursos</h1>
+
+    <form action="/cadastrar_curso" method="POST">
+        <input type="text" name="nome" placeholder="Nome do curso" required>
+        <input type="text" name="descricao" placeholder="Descrição do curso">
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <h2>Lista de Cursos</h2>
+
+    <ul>
+        {% for curso in cursos %}
+            <li>
+                <strong>{{ curso[1] }}</strong> - {{ curso[2] }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <div>
+        <a href="/">Voltar para Alunos</a><br>
+        <a href="/matricular">Ir para Matrícula</a>
+    </div>
+
+</div>
+
+</body>
+</html>
