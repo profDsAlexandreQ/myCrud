@@ -20,7 +20,7 @@
     <h2>Lista de Alunos</h2>
 
     <ul>
-        {% for aluno in alunos %}
+        {% for aluno in alunos %}// O aluno é uma tupla (id, nome, idade, email)
             <li>
                 <strong>{{ aluno[1] }}</strong> - {{ aluno[2] }} anos - {{ aluno[3] }}
             </li>

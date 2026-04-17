@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect
 import mysql.connector
 
-app = Flask(__name__)
+app = Flask(__name__)# Conexão com o banco de dados
 
 def conectar():
     return mysql.connector.connect(
